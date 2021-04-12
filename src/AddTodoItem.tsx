@@ -1,34 +1,39 @@
-import React, { useState } from 'react';
-import { AddTodo } from './types';
+import React, { useState } from "react";
+import { AddTodo } from "./types";
 
 interface Props {
-  addTodo: AddTodo;
+	addTodo: AddTodo;
 }
 
 export const AddTodoItem: React.FC<Props> = ({ addTodo }) => {
-  const [text, setText] = useState('');
+	const [text, setText] = useState("");
 
-  return (
-    <div className="add-todo">
-      <form>
-        <input
-          type="text"
-          value={text}
-          onChange={e => {
-            setText(e.target.value);
-          }}
-        />
-        <button
-          type="submit"
-          onClick={e => {
-            e.preventDefault();
-            addTodo(text);
-            setText('');
-          }}
-        >
-          Add Todo
-        </button>
-      </form>
-    </div>
-  );
+	return (
+		<div className="add-todo">
+			<form className="add-form">
+				<input
+					className="input-form"
+					placeholder="Add Task"
+					type="text"
+					value={text}
+					onChange={(e) => {
+						setText(e.target.value);
+					}}
+				/>
+			</form>
+		</div>
+	);
 };
+
+/*
+    <button
+      type="submit"
+      onClick={(e) => {
+        e.preventDefault();
+        addTodo(text);
+        setText("");
+      }}
+    >
+     Add Todo
+    </button>
+*/

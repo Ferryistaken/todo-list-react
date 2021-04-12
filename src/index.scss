@@ -1,56 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap");
 
-$base-color: #16111A;
-$middle-color: #F45947;
-$accent-color: #841738;
-$accent-color-dim: #841738c2;
-$strike-color: #87555C;
+$base-color: #073b4c;
+$middle-color: #118ab2;
+$accent-color: #06d6a0;
+$accent-color-dim: #06d6a0c2;
+$accent-color-transparent: #06d69e3b;
+$strike-color: #ffd166;
 
 body {
-    background-color: $base-color;
+	background-color: $base-color;
 }
 
 .todo-list {
-    font-family: 'Overpass', sans-serif;
-    font-size: 25px;
-    background-color: $middle-color;
-    color: $base-color;
-    border-radius: 10px;
-    margin: auto;
-    width: 50%;
-    margin-top: 20vh;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	font-family: "Overpass", sans-serif;
+	font-size: 25px;
+	background-color: $middle-color;
+	color: $base-color;
+	border-radius: 10px;
+	margin: auto;
+	width: 50%;
+	margin-top: 20vh;
+	padding-top: 7px;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
 }
 
 .todo-item {
-	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
-    list-style-type: none;
-    margin-top: 0.5vh;
-    text-align: center;
-    height: 100%;
-    border-radius: 20px;
+	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+	list-style-type: none;
+	margin-top: 0.5vh;
+	text-align: center;
+	height: 100%;
+	border-radius: 20px;
 }
 
 .todo-item:hover {
 	background: $accent-color-dim;
-    margin: 10px;
-    padding: auto;
-    border-radius: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
+	margin: 10px;
+	padding: auto;
+	border-radius: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 .checkboxitem {
-    display: none;
+	display: none;
 }
 
-input[type=text] {
-    outline-width: 0;
+.add-todo {
+	margin: auto;
+	width: 50%;
+}
+
+.todo-form {
+}
+
+input[type="text"] {
+	font-family: "Overpass", sans-serif;
+	font-size: 17px;
+	color: $accent-color-dim;
+	background-color: $base-color;
+	border: none;
+	outline: none;
+	border-radius: 20px;
+	padding: 10px;
+	margin-bottom: 20px;
+	justify-self: center;
+}
+
+input[type="text"]::placeholder {
+	color: $accent-color-transparent;
+	font-family: "Overpass", sans-serif;
+	font-style: italic;
+	text-align: center;
 }
 
 button {
-    background-color: $accent-color;
-    border-radius: 50px;
+	background-color: $accent-color;
+	border-radius: 50px;
+	display: none;
 }
 
 /* Strikethrough */
@@ -58,11 +85,11 @@ button {
 .strikethrough {
 	display: inline-block;
 	position: relative;
-	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .strikethrough:after {
-	content: '';
+	content: "";
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -70,10 +97,9 @@ button {
 	margin-top: -0.7em;
 	background: $base-color;
 	transform-origin: center left;
-	animation: strikethrough 1s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
-	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+	animation: strikethrough 1s 0.5s cubic-bezier(0.55, 0, 0.1, 1) 1;
+	transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
-
 
 /* Little hover effect */
 
@@ -84,9 +110,6 @@ button {
 	transform: scaleX(0);
 	transform-origin: center right;
 }
-
-
-
 
 /* Keyframes for initial animation */
 
