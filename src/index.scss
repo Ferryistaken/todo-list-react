@@ -13,17 +13,17 @@ body {
 
 .todo-list {
 	font-family: "Overpass", sans-serif;
-	font-size: 25px;
+	font-size: 2vw;
 	background-color: $middle-color;
 	color: $base-color;
 	border-radius: 10px;
 	margin: auto;
 	margin-top: 20vh;
 	margin-bottom: 20vh;
-	width: 50%;
-	padding-top: 7px;
-	padding-bottom: 50px;
-	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	width: 50vw;
+	padding-top: 1vw;
+	padding-bottom: 4.5vw;
+	box-shadow: 0 1.5vw 2vw rgba(0, 0, 0, 0.6);
 	text-align: center;
 }
 
@@ -40,8 +40,8 @@ body {
 	margin: 10px;
 	padding: auto;
 	border-radius: 10px;
-	padding-right: 5px;
-	padding-left: 5px;
+	padding-right: 2vw;
+	padding-left: 2vw;
 }
 
 .checkboxitem {
@@ -53,8 +53,8 @@ body {
 }
 
 .todo-form {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
 }
 
 .add-form {
@@ -64,15 +64,15 @@ body {
 
 input[type="text"] {
 	font-family: "Overpass", sans-serif;
-	font-size: 17px;
+	font-size: 1.5vw;
 	color: $accent-color-dim;
 	background-color: $base-color;
 	border: none;
 	outline: none;
 	border-radius: 20px;
-	padding: 10px;
-	margin-bottom: 10px;
-	margin-top: 10px;
+	padding: 0.8vw;
+	margin-bottom: 1vw;
+	margin-top: 0.8vw;
 }
 
 input[type="text"]::placeholder {
@@ -87,9 +87,9 @@ button {
 	color: $base-color;
 	background-color: $accent-color;
 	border: none;
-	padding: 10px;
+	padding: 1vw;
 	outline: none;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.6);
 	border-radius: 50px;
 	margin: 0 auto;
 	display: block;
