@@ -9,7 +9,7 @@ export const AddTodoItem: React.FC<Props> = ({ addTodo }) => {
 	const [text, setText] = useState("");
 
 	return (
-		<div className="add-todo">
+		<span className="add-todo">
 			<form className="add-form">
 				<input
 					className="input-form"
@@ -20,8 +20,18 @@ export const AddTodoItem: React.FC<Props> = ({ addTodo }) => {
 						setText(e.target.value);
 					}}
 				/>
+				<button
+					type="submit"
+					onClick={(e) => {
+						e.preventDefault();
+						addTodo(text);
+						setText("");
+					}}
+				>
+					Add to list
+				</button>
 			</form>
-		</div>
+		</span>
 	);
 };
 

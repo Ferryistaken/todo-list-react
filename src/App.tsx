@@ -14,11 +14,15 @@ const initialTodos: Todo[] = [
 		complete: true,
 	},
 	{
-		text: "Eternal Doom",
+		text: "Rust Evangelism",
 		complete: true,
 	},
 	{
-		text: "Existential Dread",
+		text: "Donate to famous conspiracy theorists",
+		complete: false,
+	},
+	{
+		text: "Homework",
 		complete: false,
 	},
 ];

@@ -18,17 +18,19 @@ body {
 	color: $base-color;
 	border-radius: 10px;
 	margin: auto;
-	width: 50%;
 	margin-top: 20vh;
+	margin-bottom: 20vh;
+	width: 50%;
 	padding-top: 7px;
+	padding-bottom: 50px;
 	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+	text-align: center;
 }
 
 .todo-item {
 	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 	list-style-type: none;
 	margin-top: 0.5vh;
-	text-align: center;
 	height: 100%;
 	border-radius: 20px;
 }
@@ -47,11 +49,17 @@ body {
 }
 
 .add-todo {
-	margin: auto;
-	width: 50%;
+	text-align: center;
 }
 
 .todo-form {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.add-form {
+	margin: 0 auto;
+	align: center;
 }
 
 input[type="text"] {
@@ -63,8 +71,8 @@ input[type="text"] {
 	outline: none;
 	border-radius: 20px;
 	padding: 10px;
-	margin-bottom: 20px;
-	justify-self: center;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 input[type="text"]::placeholder {
@@ -75,9 +83,16 @@ input[type="text"]::placeholder {
 }
 
 button {
+	font-family: "Overpass", sans-serif;
+	color: $base-color;
 	background-color: $accent-color;
+	border: none;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
 	border-radius: 50px;
-	display: none;
+	margin: 0 auto;
+	display: block;
 }
 
 /* Strikethrough */
