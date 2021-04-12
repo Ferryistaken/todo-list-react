@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TodoList } from './TodoList';
 import { AddTodo, Todo } from './types';
 import { AddTodoItem } from './AddTodoItem';
-//import './index.scss'
+import './index.scss'
 
 const initialTodos: Todo[] = [
   {
