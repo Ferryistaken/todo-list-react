@@ -68,6 +68,9 @@ ul {
 	align: center;
 }
 
+.todolist-container {
+}
+
 input[type="text"] {
 	font-family: "Overpass", sans-serif;
 	font-size: 1.5vw;
@@ -102,6 +105,18 @@ button {
 	display: block;
 	width: 1ew;
 	height: 1ew;
+	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+button:hover {
+	background-color: $middle-color;
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.6);
+	color: $accent-color;
+}
+
+button:active {
+	transition: all 0s cubic-bezier(0.55, 0, 0.1, 1);
+	background-color: $base-color;
 }
 
 /* Strikethrough */

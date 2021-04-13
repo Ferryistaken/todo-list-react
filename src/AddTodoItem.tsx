@@ -34,16 +34,3 @@ export const AddTodoItem: React.FC<Props> = ({ addTodo }) => {
 		</span>
 	);
 };
-
-/*
-    <button
-      type="submit"
-      onClick={(e) => {
-        e.preventDefault();
-        addTodo(text);
-        setText("");
-      }}
-    >
-     Add Todo
-    </button>
-*/

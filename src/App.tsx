@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TodoList } from "./TodoList";
-import { AddTodo, Todo } from "./types";
+import { AddTodo, ClearTodos, Todo } from "./types";
 import { AddTodoItem } from "./AddTodoItem";
 import "./index.scss";
 
@@ -48,9 +48,17 @@ function App() {
 		setTodos([...todos, newTodo]);
 	};
 
+	const clearTodos: ClearTodos = () => {
+		
+	};
+
 	return (
 		<div className="todo-list">
-			<TodoList todos={todos} toggleTodo={toggleTodo} />
+			<TodoList
+				todos={todos}
+				toggleTodo={toggleTodo}
+				clearTodos={clearTodos}
+			/>
 			<AddTodoItem addTodo={addTodo} />
 		</div>
 	);
