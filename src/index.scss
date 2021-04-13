@@ -142,15 +142,12 @@ button:active {
 
 /* Little hover effect */
 
-.strikethrough:hover {
-}
-
 .strikethrough:hover:after {
 	transform: scaleX(0);
 	transform-origin: center right;
 }
 
-/* Keyframes for initial animation */
+/* Keyframes for initial animation 
 
 @keyframes strikethrough {
 	from {
@@ -160,3 +157,4 @@ button:active {
 		transform: scaleX(1);
 	}
 }
+*/

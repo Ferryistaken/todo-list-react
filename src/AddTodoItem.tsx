@@ -13,7 +13,7 @@ export const AddTodoItem: React.FC<Props> = ({ addTodo }) => {
 			<form className="add-form">
 				<input
 					className="input-form"
-					placeholder="Add Task"
+					placeholder="Add Task..."
 					type="text"
 					value={text}
 					onChange={(e) => {
