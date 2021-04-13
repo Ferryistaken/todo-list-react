@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { TodoList } from "./TodoList";
 import { AddTodo, ClearTodos, Todo } from "./types";
+import { TodoList } from "./TodoList";
 import { AddTodoItem } from "./AddTodoItem";
+import { ClearTodoList } from "./ClearList";
+
 import "./index.scss";
 
 const initialTodos: Todo[] = [
@@ -49,18 +51,22 @@ function App() {
 	};
 
 	const clearTodos: ClearTodos = () => {
-		
+		setTodos([{ text: "", complete: false }]);
+		console.log("list reset");
 	};
 
 	return (
-		<div className="todo-list">
-			<TodoList
-				todos={todos}
-				toggleTodo={toggleTodo}
-				clearTodos={clearTodos}
-			/>
-			<AddTodoItem addTodo={addTodo} />
-		</div>
+		<>
+			<div className="todo-list">
+				<ClearTodoList clearTodos={clearTodos} />
+				<TodoList
+					todos={todos}
+					toggleTodo={toggleTodo}
+					clearTodos={clearTodos}
+				/>
+				<AddTodoItem addTodo={addTodo} />
+			</div>
+		</>
 	);
 }
 

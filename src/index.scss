@@ -17,6 +17,7 @@ ul {
 }
 
 .todo-list {
+	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 	font-family: "Overpass", sans-serif;
 	font-size: 2vw;
 	background-color: $middle-color;
@@ -117,6 +118,12 @@ button:hover {
 button:active {
 	transition: all 0s cubic-bezier(0.55, 0, 0.1, 1);
 	background-color: $base-color;
+}
+
+.reset-button {
+	font-size: 1.2vw;
+	margin-top: 1%;
+	margin-left: 83%;
 }
 
 /* Strikethrough */

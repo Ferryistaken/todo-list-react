@@ -11,7 +11,6 @@ interface Props {
 export const TodoList: React.FC<Props> = ({ todos, toggleTodo }) => {
 	return (
 		<div className="todolist-container">
-			<button type="reset"></button>
 			<ul>
 				{todos.map((todo) => (
 					<TodoListItem
