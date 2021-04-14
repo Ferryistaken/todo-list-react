@@ -52,11 +52,15 @@ function App() {
 
 	const addTodo: AddTodo = (text: string) => {
 		const newTodo = { text, complete: false };
+		// TODO: Implement a way to add a todo to localstorage when this is called
+		let oldTodos = localStorage.getItem("ferry-todo-list-items");
+		
 		setTodos([...todos, newTodo]);
 	};
 
 	const clearTodos: ClearTodos = () => {
 		setTodos([{ text: "", complete: false }]);
+		localStorage.removeItem("ferry-todo-list-items");
 		console.log("list reset");
 	};
 
@@ -64,7 +68,15 @@ function App() {
 		console.log("Local Storage is Available");
 		if (localStorageHasItem("ferry-todo-list-items")) {
 			console.log("Current user has already some set todos");
-			// TODO: implement a way to get the old items
+			if (
+				localStorage.getItem("ferry-todo-list-items") ===
+				'[{"text":"","complete":false}]'
+			) {
+				console.log("Previous list was empty");
+				clearTodos();
+			}
+			let oldTodos = localStorage.getItem("ferry-todo-list-items");
+			console.log(oldTodos);
 		} else {
 			console.log("Creating new localstorage todolist");
 			localStorage.setItem(
