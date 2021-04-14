@@ -3,6 +3,12 @@ import { AddTodo, ClearTodos, Todo } from "./types";
 import { TodoList } from "./TodoList";
 import { AddTodoItem } from "./AddTodoItem";
 import { ClearTodoList } from "./ClearList";
+import {
+	localStorageAvailable,
+	localStorageHasItem,
+	stringifyCurrentTodos,
+	todoToString,
+} from "./LocalStorageFunctions";
 
 import "./index.scss";
 
@@ -54,6 +60,20 @@ function App() {
 		setTodos([{ text: "", complete: false }]);
 		console.log("list reset");
 	};
+
+	if (localStorageAvailable()) {
+		console.log("Local Storage is Available");
+		if (localStorageHasItem("ferry-todo-list-items")) {
+			console.log("Current user has already some set todos");
+			// TODO: implement a way to get the old items
+		} else {
+			console.log("Creating new localstorage todolist");
+			localStorage.setItem(
+				"ferry-todo-list-items",
+				stringifyCurrentTodos(todos)
+			);
+		}
+	}
 
 	return (
 		<>

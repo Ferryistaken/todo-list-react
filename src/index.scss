@@ -17,11 +17,11 @@ ul {
 }
 
 .todo-list {
-	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 	font-family: "Overpass", sans-serif;
 	font-size: 2vw;
 	background-color: $middle-color;
 	color: $base-color;
+	transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 	border-radius: 10px;
 	margin: auto;
 	margin-top: 20vh;

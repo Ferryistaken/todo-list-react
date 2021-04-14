@@ -6,6 +6,7 @@ interface Todo {
 	complete: boolean;
 }
 
+
 type ToggleTodo = (selectedTodo: Todo) => void;
 
 type ClearTodos = () => void;
