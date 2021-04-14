@@ -7,7 +7,6 @@ import {
 	localStorageAvailable,
 	localStorageHasItem,
 	stringifyCurrentTodos,
-	todoToString,
 } from "./LocalStorageFunctions";
 
 import "./index.scss";
